@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'aaargh';
+    src: url(../font/aaargh-webfont.woff) format('woff');
+}
+
+body {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position-y: -50px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.profile {
+    width : 150px;
+    height : 150px;
+    /* border : 1px solid red; */
+    position: absolute;
+    margin: auto;
+    top : -70px;
+    left : 180px;
+    background-image: url(../../img/bdlogo.gif);
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.container {
+    /* border : 1px solid red; */
+    position : relative;
+    margin : 100px auto;
+    width : 500px;
+    height : auto;
+    background-color : rgba(0, 0, 0, .5);
+}
+ 
+h1 {
+    font-family: 'aaargh';
+    text-align: center;
+    color : #ffff33;
+    padding-top : 100px;
+}
+
+form {
+    padding : 40px;
+    padding-top : 0;
+    /* border : 1px solid green; */
+}
+
+form input {
+    display: inline-block;
+}
+
+input[type] {
+    width : 100%;
+    margin-bottom : 15px;
+    height : 50px;
+    border : none;
+    border-bottom : 2px solid #eaeaea;
+    color : #eaeaea;
+}
+
+input[type="password"],
+input[type="text"] {
+    background-color : rgba(0, 0, 0, .0);
+}
+
+p {
+    font-weight: bold;
+    margin : 0;
+    color : #fff;
+}
+
+input[type="submit"] {
+    margin-top : 15px;
+    border-radius : 50px;
+    color : #fff;
+    font-weight : bolder;
+    border : none;
+    background-color : #ff6666;
+    text-shadow: 0px 1px 0px #111;
+    letter-spacing : 1px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    text-shadow: 0px 0px 1px #111;
+}
+
+p.footer {
+    padding-bottom : 50px;
+}
+
+p.footer a {
+    color : #fff;
+}
+
+p.footer a:hover {
+    text-decoration: none;
+    color : #ff6666;
+}
+
+.overlay {
+    position : absolute;
+    top : 0;
+    left :0;
+    right: 0;
+    bottom : 0;
+    height : 100%;
+    background-color: rgba(0, 102, 0, .2);
+}
+
+/* VERSI MOBILE */
+
+@media (max-width : 480px) {
+    .container {
+        width : 100%;
+        margin-top : 0;
+    }
+
+    body {
+        background-size: cover;
+    }
+    .profile {
+        display: none;
+    }
+    input[placeholder] {
+        color : #fff;
+    }
+}

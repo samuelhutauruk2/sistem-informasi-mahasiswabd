@@ -1,0 +1,373 @@
+/*  
+    Dikodekan oleh : Samuel Hutauruk
+    26 April 2019 
+    */
+
+
+@font-face {
+    font-family : 'karla';
+    src: local('karla'), url('../fonts/Karla-Regular.WOFF') format('woff');
+}
+
+@font-face {
+    font-family: 'rakkas';
+    src : local('rakkas'), url('../fonts/Rakkas-Regular.WOFF') format('woff');
+}
+
+body {
+    font-family : 'karla';
+    letter-spacing: -1px;
+    font-size: 18px;
+}
+
+/* ========= NAVBAR ========= */
+
+.navbar {
+    border-bottom : 5px solid yellowgreen;
+    position : fixed;
+    background-color : #eaeaea;
+    width : 100%;
+    height : 40px;
+    padding : 10px;
+    line-height: 40px;
+    z-index : 9999;
+}
+
+.navbar .title a {
+    float: left;
+    font-size: 20px;
+    text-decoration: none;
+    color : #111;
+    padding-left : 100px;
+    font-weight: bold;
+    letter-spacing: normal;
+}
+
+.navbar .menu {
+    /* border : 1px solid red; */
+    margin-right : 100px;
+}
+
+.navbar ul {
+    display : inline-block;
+    float : right;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color : #111;
+    border-bottom : 10px;
+    padding : 5px 10px;
+    text-transform : capitalize;
+    transition : color 1s ease 0s;
+    transition : background-color 300ms ease 0s;
+}
+
+.navbar ul li a.active {
+    border-radius : 5px;
+    color : #eaeaea;
+    background-color : #2e2e2e;
+}
+
+.navbar ul li a:hover {
+    color : #eaeaea;
+    background-color : #2e2e2e;
+    border-radius : 5px;
+}
+
+/* ========= JUMBOTRON ========= */
+.container .hero {
+    width : 100%;
+    height : 500px;
+    background-image: url('../img/jumbo.jpg');
+    background-size: cover;                     /* membuat gambar memenuhi seluruh luas elemen */
+    background-attachment: fixed;               /* properti khusus untuk background agar posisi fixed*/
+    background-repeat: no-repeat;
+    background-position-y: -390px;
+    z-index : -99;
+}
+
+.container .overlay {
+    position : absolute;
+    background-color: rgba(0, 0, 0, .5);
+    top : 0;
+    left : 0;
+    right : 0;
+    min-height: 500px;                         /* min-height membuat tinggi elemen tetap */
+    z-index : 1;
+}
+
+.container .overlay h1 {
+    font-family: 'rakkas';
+    color : #eaeaea;
+    text-align: center;
+    margin-top : 230px;
+    font-size : 40px;
+    letter-spacing: 2px;
+    text-shadow: 5px 3px 2px black;
+}
+
+/* ================== TOMBOL LOGIN ============= */
+
+.container .overlay span {
+    display: block;
+    position : relative;
+    top : 15px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    width : 100px;
+    border : 1px solid #fff;
+    color : #fff;
+    margin : auto;
+    padding : 10px;
+    border-radius : 5px;
+    text-align: center;
+    transition-duration: 500ms;
+}
+
+.container .overlay span a {
+    color : #fff;
+    text-decoration: none;
+}
+
+.container .overlay span a:hover {
+    color : #2e2e2e;
+}
+
+.container .overlay span:hover {
+    background-color : #fff;
+    font-weight: bold;
+}
+
+
+/* ====== SAMBUTAN ======= */
+
+.container .main {
+    width: 1000px;
+    margin : auto;
+}
+
+.main .logo {
+    width : 150px;
+    height : 150px;
+    background-image: url(../img/bdlogo.gif);
+    background-size: cover;
+    position : relative;
+    margin : auto;
+    top : -70px;
+    z-index: 999;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+    border-radius : 50%;
+}
+
+.main h2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    height: 50px;
+    line-height: 50px;
+    background-color: lightblue;
+    border-bottom: 3px solid green;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);
+}
+
+.main .isi {
+    width : 900px;
+    margin : 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top : 12px;
+    color: grey;
+    padding : 10px;
+    letter-spacing: 0.3px;
+    text-align: justify;
+    line-height: 20px;
+}
+
+.main .sambutan .isi .row {
+    height : 180px;
+    padding : 15px;
+    margin-bottom : 15px;
+    border-radius : 10px;
+    box-shadow: 0px 0px 3px green;
+}
+
+.main .sambutan .isi .logoParagraf img {
+    width : 150px;
+    height : 150px;
+    padding: 15px;
+}
+
+.main .sambutan .isi .logoParagraf img[alt="Diskusi"] {
+    float : left;
+}
+
+.main .sambutan .isi .logoParagraf img[alt="Programming"] {
+    float : right;
+}
+
+.main .sambutan .isi .logoParagraf img[alt="Networking"] {
+    float : left;
+}
+
+.main .sambutan .isi .logoParagraf img[alt="Hacking"] {
+    float : right;
+}
+
+.main .sambutan .isi .row p.satu {
+    padding-top : 25px;
+}
+
+.main .sambutan .isi .row p.dua {
+    padding-top : 40px;
+}
+
+.main .sambutan .isi .row p.tiga {
+    padding-top : 45px;
+}
+
+.main .sambutan .isi .row p.empat {
+    padding-top : 18px;
+}
+
+.main h2 {
+    margin-top : 20px;
+}
+
+/* ===== VISI MISI ====== */
+
+.main .visimisi .isi {
+    width : 300px;
+}
+
+.main .visimisi .kotak {
+    width : 900px;
+    margin : auto;
+    margin-top : 30px;
+}
+
+.main .visimisi h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    padding : 10px;
+    margin-top : 10px;
+}
+
+.main .visimisi .left,
+.main .visimisi .right {
+    overflow: auto;
+    border-radius : 10px;
+    width : 47%;
+}
+
+.main .visimisi .left {
+    border: 1px solid palevioletred;
+    float : left;
+}
+
+.main .visimisi .right {
+    border: 1px solid green;
+    float : right;
+}
+
+.main .clear {
+    clear : both;
+}
+
+/* ============ FASILITAS ============ */
+
+.main .fasilitas .kotakFasilitas {
+    width : 220px;
+    height : 400px;
+    box-shadow: 0px 0px 3px green;
+    margin : 20px 0px 0px 20px;
+    float : left;
+    text-align: center;
+    border-radius : 10px;
+    color : grey;
+    font-size : 17px;
+    box-sizing: border-box;
+    padding : 15px;
+    word-spacing: 5px;
+
+}
+
+.main .fasilitas span.judulFasilitas {
+    font-size: 18px;
+    font-weight: bolder;
+    display: inline-block;
+    padding : 10px;
+    color : #2e2e2e;
+}
+
+.main .fasilitas img {
+    margin-top : 15px;
+    width : 100px;
+    height : 100px;
+    padding : 40px;
+    padding-bottom: 0px;
+}
+
+/* =========== PROGRAM STUDI ============= */
+
+.main .prodi .kanvasProdi {
+    box-shadow: 0px 0px 5px green;
+    width : 900px;
+    margin : 25px auto;
+    box-sizing: border-box;
+    padding-bottom : 10px;
+}
+
+.main .prodi .kanvasProdi .judulProdi {
+    text-transform: capitalize;
+    background-color: yellow;
+    border-bottom : 5px solid green;
+    color: green;
+    padding : 10px;
+    font-weight: bold;
+}
+
+.main .prodi .kanvasProdi table,
+.main .prodi .kanvasProdi tr,
+.main .prodi .kanvasProdi td {
+    border : 2px solid silver;
+    padding : 5px;
+}
+
+.main .prodi .kanvasProdi table {
+    margin : 10px auto;
+}
+
+.main .prodi .kanvasProdi td.kiri {
+    width : 50%;
+}
+
+.main .prodi .kanvasProdi td.kanan {
+    width : 300px;
+}
+
+/* =========== FOOTER ============= */
+
+.footer {
+    width : 100%;
+    height : 300px;
+    margin-top : 60px;
+    background-color: #2e2e2e;
+}
+
+p.alamat {
+    display : block;
+    width : 50%;
+    margin : auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-bottom: 1px dashed silver;
+    font-size: 14px;
+    color: silver;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    padding : 50px;
+    padding-bottom: 25px;
+}
+
